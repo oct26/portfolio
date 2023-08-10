@@ -39,7 +39,7 @@ body { width:100%; background:#fff; font-family: 'NexonMaplestory', serif; }
 
 @media screen and (max-width: 768px) {
     .listInner { width:47%; }
-    .tabBox li { width:23%; font-size:1px; }
+    .tabBox li { width:23%; font-size:12px; }
 }
 
 /*메뉴이름*/
