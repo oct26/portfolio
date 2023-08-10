@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+</head>
+<body>
+
+    <div id="wrap">
+        
+        <!--검색창-->
+        <div class="searchBox">
+            <img src="https://composecoffee.com/layouts/KSOTheme_Starter/src/img/logo-light.svg">
+            <label><input type="text" id="search" onkeyup="filter()" placeholder="메뉴를 검색하세요" /></label>
+        </div>
+
+        <!--탭메뉴-->
+        <div class="menuTab">
+            <ul class="tabBox">
+                <li class="tab01 selected">전체</li>
+                <li class="tab02">커피</li>
+                <li class="tab03">더치커피</li>
+                <li class="tab04">논커피</li>
+                <li class="tab05">주스</li>
+                <li class="tab06">스무디</li>
+                <li class="tab07">티</li>
+                <li class="tab08">에이드</li>
+                <li class="tab09">프라페</li>
+                <li class="tab10">밀크쉐이크</li>
+                <li class="tab11">사이드메뉴</li>
+                <li class="tab12">시즌메뉴</li>
+            </ul>
+        </div>
+
+        <!--메뉴리스트 시작-->
+
+        <!--커피-->
+        <div id="coffee" class="listBox">
+            <div class="listInner">
+                <span class="menuName">에스프레소</span>
+                <span class="menuImg"><img src="images/coffee01.jpg"></span>
+                <span class="menuMake">
+                    <i>에스프레소샷 2샷 (3번)</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">아메리카노(H)</span>
+                <span class="menuImg"><img src="images/coffee02.jpg"></span>
+                <span class="menuMake">
+                    <i>뜨거운물 350ml</i>
+                    <i>에스프레소샷 2샷 (3번)</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">아메리카노(I)</span>
+                <span class="menuImg"><img src="images/coffee03.jpg"></span>
+                <span class="menuMake">
+                    <i>물 200ml</i>
+                    <i>얼음 가득</i>
+                    <i>에스프레소샷 2샷 (3번)</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">카페라떼(H)</span>
+                <span class="menuImg"><img src="images/coffee04.jpg"></span>
+                <span class="menuMake">
+                    <i>베리에이션샷 2샷 (4번)</i>
+                    <i>스팀우유 270ml</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">카페라떼(I)</span>
+                <span class="menuImg"><img src="images/coffee05.jpg"></span>
+                <span class="menuMake">
+                    <i>우유 200ml</i>
+                    <i>얼음 가득</i>
+                    <i>베리에이션샷 2샷 (4번)</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">카푸치노</span>
+                <span class="menuImg"><img src="images/coffee06.jpg"></span>
+                <span class="menuMake">
+                    <i>베리에이션샷 2샷 (4번)</i>
+                    <i>스팀우유 250ml</i>
+                    <i class="notice">* 고객선택 : 시나몬파우더(우유 붓기전 에스프레소 위 토핑)</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">바닐라라떼(H)</span>
+                <span class="menuImg"><img src="images/coffee07.jpg"></span>
+                <span class="menuMake">
+                    <i>바닐라시럽 2p</i>
+                    <i>설탕시럽 1p</i>
+                    <i>베리에이션샷 2샷 (4번)</i>
+                    <i>스팀우유 250ml</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">바닐라라떼(I)</span>
+                <span class="menuImg"><img src="images/coffee08.jpg"></span>
+                <span class="menuMake">
+                    <i>바닐라시럽 2p</i>
+                    <i>설탕시럽 1p</i>
+                    <i>우유 200ml 선</i>
+                    <i class="mix"> └ Mix</i>
+                    <i>얼음 가득</i>
+                    <i>베리에이션샷 2샷 (4번)</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">헤이즐넛라떼(H)</span>
+                <span class="menuImg"><img src="images/coffee09.jpg"></span>
+                <span class="menuMake">
+                    <i>헤이즐넛시럽 2p</i>
+                    <i>설탕시럽 1p</i>
+                    <i>베리에이션샷 2샷 (4번)</i>
+                    <i>스팀우유 250ml</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">헤이즐넛라떼(I)</span>
+                <span class="menuImg"><img src="images/coffee10.jpg"></span>
+                <span class="menuMake">
+                    <i>헤이즐넛시럽 2p</i>
+                    <i>설탕시럽 1p</i>
+                    <i>우유 200ml 선</i>
+                    <i class="mix"> └ Mix</i>
+                    <i>얼음 가득</i>
+                    <i>베리에이션샷 2샷 (4번)</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">카라멜마끼아또(H)</span>
+                <span class="menuImg"><img src="images/coffee11.jpg"></span>
+                <span class="menuMake">
+                    <i>카라멜소스 30g</i>
+                    <i>설탕시럽 2p</i>
+                    <i>스팀우유 250ml</i>
+                    <i class="mix"> └ Mix</i>
+                    <i>베리에이션샷 2샷 (4번)</i>
+                    <i class="deco">+ 카라멜소스(#드리즐)</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">카라멜마끼아또(I)</span>
+                <span class="menuImg"><img src="images/coffee12.jpg"></span>
+                <span class="menuMake">
+                    <i>카라멜베이스 200ml 선</i>
+                    <i>얼음 가득</i>
+                    <i>베리에이션샷 2샷 (4번)</i>
+                    <i class="deco">+ 카라멜소스(#드리즐)</i>
+                    <hr class="menuHr">
+                    <i>카라멜소스 25g</i>
+                    <i>설탕시럽 2p</i>
+                    <i>바닐라시럽 0.5p</i>
+                    <i>우유 200ml 선</i>
+                    <i class="mix"> └ Mix</i>
+                    <i>베리에이션샷 2샷 (4번)</i>
+                    <i class="deco">+ 카라멜소스(#드리즐)</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">카페모카(H)</span>
+                <span class="menuImg"><img src="images/coffee13.jpg"></span>
+                <span class="menuMake">
+                    <i>초코소스 30g</i>
+                    <i>설탕시럽 2p</i>
+                    <i>베리에이션샷 2샷 (4번)</i>
+                    <i class="mix"> └ Mix</i>
+                    <i>스팀우유 250ml</i>
+                    <i class="deco">+ 휘핑 → 초코소스(Z드리즐) → 바리스타카카오</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">카페모카(I)</span>
+                <span class="menuImg"><img src="images/coffee14.jpg"></span>
+                <span class="menuMake">
+                    <i>초코소스 30g</i>
+                    <i>설탕시럽 2p</i>
+                    <i>베리에이션샷 2샷 (4번)</i>
+                    <i class="mix"> └ Mix</i>
+                    <i>스팀우유 250ml</i>
+                    <i class="mix"> └ Mix</i>
+                    <i>얼음 가득</i>
+                    <i class="deco">+ 휘핑 → 초코소스(Z드리즐) → 바리스타카카오</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">돌체라떼(H)</span>
+                <span class="menuImg"><img src="images/coffee15.jpg"></span>
+                <span class="menuMake">
+                    <i>연유 50g</i>
+                    <i>스팀우유 250ml</i>
+                    <i class="mix"> └ Mix</i>
+                    <i>베리에이션샷 2샷 (4번)</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">돌체라떼(I)</span>
+                <span class="menuImg"><img src="images/coffee16.jpg"></span>
+                <span class="menuMake">
+                    <i>돌체베이스 200ml 선</i>
+                    <i>얼음 가득</i>
+                    <i>베리에이션샷 2샷</i>
+                    <hr class="menuHr">
+                    <i>연유 40g</i>
+                    <i>우유 200ml 선</i>
+                    <i class="mix"> └ Mix</i>
+                    <i>얼음 가득</i>
+                    <i>베리에이션샷 2샷 (4번)</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">흑당카페라떼</span>
+                <span class="menuImg"><img src="images/coffee17.jpg"></span>
+                <span class="menuMake">
+                    <i>흑당소스 45g</i>
+                    <i class="deco">+ 컵 돌려서 소스 묻히기</i>
+                    <i>우유 200ml</i>
+                    <i>얼음가득</i>
+                    <i>샷추가 1샷 (1번)</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">달고나라떼</span>
+                <span class="menuImg"><img src="images/coffee18.jpg"></span>
+                <span class="menuMake">
+                    <i>흑당소스 10g</i>
+                    <i>설탕시럽 1p</i>
+                    <i>바닐라시럽 1p</i>
+                    <i>우유 200ml</i>
+                    <i class="mix"> └ Mix</i>
+                    <i>얼음 가득</i>
+                    <i>에스프레소샷 2샷 (3번)</i>
+                    <i class="deco">+ 달고나토핑 2.5sp (30g)</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">아인슈페너라떼</span>
+                <span class="menuImg"><img src="images/coffee19.jpg"></span>
+                <span class="menuMake">
+                    <i>설탕시럽 1p</i>
+                    <i>바닐라시럽 0.5p</i>
+                    <i>우유 150ml</i>
+                    <i class="mix"> └ Mix</i>
+                    <i>얼음 밑선</i>
+                    <i class="mix">
+                        <b>에어레이팅 (Mix ①번 + 저속10초)</b>
+                        설탕시럽 1.5p + 밀크쉐이크베이스 70g
+                    </i>
+                    <i class="deco">+ 바리스타카카오</i>
+                </span>
+            </div>
+        </div>
+
+        <!--더치커피-->
+        <div id="dutchcoffee" class="listBox">
+            <div class="listInner">
+                <span class="menuName">더치커피(H)</span>
+                <span class="menuImg"><img src="images/coffee20.jpg"></span>
+                <span class="menuMake">
+                    <i>콜드브루 파우치 1팩</i>
+                    <i>뜨거운물 260ml</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">더치커피(I)</span>
+                <span class="menuImg"><img src="images/coffee21.jpg"></span>
+                <span class="menuMake">
+                    <i>콜드브루 파우치 1팩</i>
+                    <i>물 200ml</i>
+                    <i>얼음 가득</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">더치라떼(H)</span>
+                <span class="menuImg"><img src="images/coffee22.jpg"></span>
+                <span class="menuMake">
+                    <i>콜드브루 파우치 1팩</i>
+                    <i>스팀우유 260ml</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">더치라떼(I)</span>
+                <span class="menuImg"><img src="images/coffee23.jpg"></span>
+                <span class="menuMake">
+                    <i>콜드브루 파우치 1팩</i>
+                    <i>우유 150ml</i>
+                    <i>얼음 가득</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">아인슈페너</span>
+                <span class="menuImg"><img src="images/coffee24.jpg"></span>
+                <span class="menuMake">
+                    <i>물 100ml</i>
+                    <i>콜드브루 파우치 1팩</i>
+                    <i>설탕시럽 1p</i>
+                    <i>바닐라시럽 0.5p</i>
+                    <i>얼음 밑선</i>
+                    <i class="mix">
+                        <b>에어레이팅 (Mix ①번 + 저속10초)</b>
+                        설탕시럽 1.5p + 밀크쉐이크베이스 70g
+                    </i>
+                    <i class="deco">+ 바리스타 카카오</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">디카페인 더치커피(H)</span>
+                <span class="menuImg"><img src="images/coffee25.jpg"></span>
+                <span class="menuMake">
+                    <i>디카페인 파우치 1팩</i>
+                    <i>뜨거운물 260ml</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">디카페인 더치커피(I)</span>
+                <span class="menuImg"><img src="images/coffee26.jpg"></span>
+                <span class="menuMake">
+                    <i>디카페인 파우치 1팩</i>
+                    <i>물 200ml</i>
+                    <i>얼음 가득</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">디카페인 더치라떼(H)</span>
+                <span class="menuImg"><img src="images/coffee27.jpg"></span>
+                <span class="menuMake">
+                    <i>디카페인 파우치 1팩</i>
+                    <i>스팀우유 260ml</i>
+                </span>
+            </div>
+            <div class="listInner">
+                <span class="menuName">디카페인 더치라떼(I)</span>
+                <span class="menuImg"><img src="images/coffee28.jpg"></span>
+                <span class="menuMake">
+                    <i>디카페인 파우치 1팩</i>
+                    <i>우유 150ml</i>
+                    <i>얼음 가득</i>
+                </span>
+            </div>
+        </div>
+
+        <!--검색창 스크립트 시작-->
+        <script>
+            function filter() {
+                let search = document.getElementById("search").value.toLowerCase();
+                let listInner = document.getElementsByClassName("listInner");
+
+                for (let i = 0; i < listInner.length; i++) {
+                    //이름만 검색되게 주석처리 (주석 풀면 만드는방법도 검색가능)
+                    //menuMake = listInner[i].getElementsByClassName("menuMake");
+                    menuName = listInner[i].getElementsByClassName("menuName");
+                    if (//menuMake[0].innerHTML.toLowerCase().indexOf(search) != -1 ||
+                    menuName[0].innerHTML.toLowerCase().indexOf(search) != -1
+                    ) {
+                    listInner[i].style.display = "block"
+                    } else {
+                    listInner[i].style.display = "none"
+                    }
+                }
+            }
+        </script>
+        <!--검색창 스크립트 끝-->
+
+        <!--탭메뉴 스크립트 시작-->
+        <script>
+
+            //버튼 색 제거,추가
+			$('.tabBox li').on('click',function(){
+			  $('.tabBox li').removeClass('selected');
+			  $(this).addClass('selected')
+			});
+
+            $(document).ready(function(){
+                $(".tab01").click(function(){
+                    $("#coffee div").show();
+                    $("#dutchcoffee div").show();
+                    $("#noncoffee div").show();
+                    $("#juice div").show();
+                    $("#smoothie div").show();
+                    $("#tea div").show();
+                    $("#ade div").show();
+                    $("#frappe div").show();
+                    $("#milkshake div ").show();
+                    $("#sidemenu div ").show();
+                    $("#season div").show();
+                });
+            }); //전체 ALL
+
+            $(document).ready(function(){
+                $(".tab02").click(function(){
+                    $("#coffee div").show();
+                    $("#dutchcoffee div").hide();
+                    $("#noncoffee div").hide();
+                    $("#juice div").hide();
+                    $("#smoothie div").hide();
+                    $("#tea div").hide();
+                    $("#ade div").hide();
+                    $("#frappe div").hide();
+                    $("#milkshake div ").hide();
+                    $("#sidemenu div ").hide();
+                    $("#season div").hide();
+                });
+            }); //커피
+
+            $(document).ready(function(){
+                $(".tab03").click(function(){
+                    $("#coffee div").hide();
+                    $("#dutchcoffee div").show();
+                    $("#noncoffee div").hide();
+                    $("#juice div").hide();
+                    $("#smoothie div").hide();
+                    $("#tea div").hide();
+                    $("#ade div").hide();
+                    $("#frappe div").hide();
+                    $("#milkshake div ").hide();
+                    $("#sidemenu div ").hide();
+                    $("#season div").hide();
+                });
+            }); //더치커피
+
+        </script>
+    <!--탭메뉴 스크립트 끝-->
+
+</body>
+</html>
