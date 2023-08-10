@@ -2,19 +2,20 @@
 li { list-style:none; }
 address,em,i { font-style:normal; }
 a { text-decoration: none; color:#333; }
-html { overflow-x: hidden;}
+html { overflow-x: hidden; }
 body { width:100%; background:#fff; font-family: 'NexonMaplestory', serif; }
 
 #wrap { position:relative; width:100%; max-width:768px; margin:0 auto; /*outline:1px solid red;*/ }
 
 /*검색창*/
-.searchBox { position:fixed; width:100%; max-width:768px; text-align:center; background:#111; padding:20px 0; }
-.searchBox img { display:block; margin:0 auto; width:50%; margin-bottom:20px;  }
+.searchBox { position:fixed; top:0; left:0; width:100%; margin:0 auto; text-align:center; background:#111; padding:20px 0; }
+.searchBox img { display:block; margin:0 auto; width:40%; margin-bottom:20px;  }
 .searchBox label { display:block; }
-.searchBox label input { display:block; margin:0 auto; width:70%; padding:0 2.5%;line-height:50px; border:1px solid #aaa; font-size:18px; border-radius:30px; }
+.searchBox label input { display:block; margin:0 auto; width:50%; padding:0 2.5%;line-height:50px; border:1px solid #aaa; font-size:18px; border-radius:30px; }
 
 @media screen and (max-width: 768px) {
-    .searchBox label input { line-height:40px; font-size:16px; }
+    .searchBox img { width:50%; }
+    .searchBox label input { width:70%; line-height:35px; font-size:14px; }
 }
 
 /*가이드*/
@@ -23,7 +24,7 @@ body { width:100%; background:#fff; font-family: 'NexonMaplestory', serif; }
 .guide p span { display:block; }
 
 @media screen and (max-width: 768px) {
-    .guide { font-size:13px; padding-top:150px; }
+    .guide { font-size:12px; padding-top:150px; }
 }
 
 /*탭메뉴*/
@@ -38,8 +39,7 @@ body { width:100%; background:#fff; font-family: 'NexonMaplestory', serif; }
 
 @media screen and (max-width: 768px) {
     .listInner { width:47%; }
-
-    .tabBox li { width:23%; font-size:16px; }
+    .tabBox li { width:23%; font-size:1px; }
 }
 
 /*메뉴이름*/
@@ -66,7 +66,9 @@ body { width:100%; background:#fff; font-family: 'NexonMaplestory', serif; }
 @media screen and (max-width: 768px) {
     .menuName { font-size:16px; }
     .menuMake i { font-size:14px; }
-    .menuMake i.notice { font-size:12px; }
+    .menuMake i.notice { font-size:12px; line-height:20px; }
+    .menuMake i.deco { line-height:20px; }
+    .menuMake i.mix { line-height:22px; }
 }
 
 /*탑버튼*/
