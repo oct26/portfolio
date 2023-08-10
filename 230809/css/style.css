@@ -23,10 +23,6 @@ body { width:100%; background:#fff; font-family: 'NexonMaplestory', serif;  }
 .listInner { width:31%; margin:1%; border:1px solid #ddd; background:#f3f3f3;  }
 .listInner span {  }
 
-@media screen and (max-width: 768px) {
-    .listInner { width:47%; }
-}
-
 /*메뉴이름*/
 .menuName { display:block; font-weight:bold; font-size:20px; text-align:center; background:#1D1D1D; color:#fff; padding:10px; }
 
@@ -44,6 +40,12 @@ body { width:100%; background:#fff; font-family: 'NexonMaplestory', serif;  }
 
 .menuMake i.notice:before, i.deco:before, i.mix:before, i.menuHr:before { display:none; }
 .menuHr { color:#aaa; border-style:dashed; display:block; margin:5px 0;  }
+
+@media screen and (max-width: 768px) {
+    .listInner { width:47%; }
+    .menuName { font-size:16px; }
+    .menuMake i { font-size:13px; }
+}
 
 /*폰트*/
 @font-face {
