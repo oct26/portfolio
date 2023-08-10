@@ -3,25 +3,44 @@ li { list-style:none; }
 address,em,i { font-style:normal; }
 a { text-decoration: none; color:#333; }
 html { overflow-x: hidden;}
-body { width:100%; background:#fff; font-family: 'NexonMaplestory', serif;  }
+body { width:100%; background:#fff; font-family: 'NexonMaplestory', serif; }
 
-#wrap { width:100%; max-width:1000px; margin:0 auto;  padding:20px 0;/*outline:1px solid red;*/ }
+#wrap { position:relative; width:100%; max-width:768px; margin:0 auto; /*outline:1px solid red;*/ }
 
 /*검색창*/
-.searchBox { width:100%; margin:0 auto; text-align:center; }
-.searchBox img { display:block; margin:0 auto; padding:20px 0 40px 0; width:40%;  }
-.searchBox  label {}
-.searchBox  label input { border-radius:30px; width:50%; line-height:50px; border:1px solid #aaa; font-size:18px; padding:0 30px; }
+.searchBox { position:fixed; width:100%; max-width:768px; text-align:center; background:#111; padding:20px 0; }
+.searchBox img { display:block; margin:0 auto; width:50%; margin-bottom:20px;  }
+.searchBox label { display:block; }
+.searchBox label input { display:block; margin:0 auto; width:70%; padding:0 2.5%;line-height:50px; border:1px solid #aaa; font-size:18px; border-radius:30px; }
+
+@media screen and (max-width: 768px) {
+    .searchBox label input { line-height:40px; font-size:16px; }
+}
+
+/*가이드*/
+.guide { width:100%; padding-top:180px; }
+.guide p { padding:10px; line-height:25px; border:1px dashed #ccc; }
+.guide p span { display:block; }
+
+@media screen and (max-width: 768px) {
+    .guide { font-size:13px; padding-top:150px; }
+}
 
 /*탭메뉴*/
 .menuTab {}
 .tabBox { display:flex; flex-wrap:wrap; justify-content: space-between; margin:30px 0; }
-.tabBox li { width:15%; margin:0.5%; line-height:40px; border-radius:5px; text-align:center; font-size:18px; border:1px solid #ddd;  }
+.tabBox li { width:15%; margin:0.5%; line-height:40px; border-radius:5px; text-align:center; font-size:18px; border:1px solid #ddd; background:#f7f7f7; }
 .tabBox li.selected { background:red; border:1px solid red; color:#fff; }
 
 .listBox { width:100%; display:flex; flex-wrap:wrap; justify-content:flex-start; }
 .listInner { width:31%; margin:1%; border:1px solid #ddd; background:#f3f3f3;  }
 .listInner span {  }
+
+@media screen and (max-width: 768px) {
+    .listInner { width:47%; }
+
+    .tabBox li { width:23%; font-size:16px; }
+}
 
 /*메뉴이름*/
 .menuName { display:block; font-weight:bold; font-size:20px; text-align:center; background:#1D1D1D; color:#fff; padding:10px; }
@@ -35,17 +54,26 @@ body { width:100%; background:#fff; font-family: 'NexonMaplestory', serif;  }
 .menuMake i { display:block; font-style:normal; font-size:18px; line-height:25px; word-break: keep-all;  }
 .menuMake i:before { float:left; content:""; display:block; width:5px; height:5px; border-radius:50%; background:red; margin:8px;  }
 .menuMake i.deco { display:inline-block; word-break: keep-all; color:#518eff; margin-left:8px; }
-.menuMake i.notice { display:inline-block; word-break: keep-all; color:#FF5151; margin-left:8px; font-size:16px;  }
+.menuMake i.notice { display:block; word-break: keep-all; color:#FF5151; margin-left:8px; font-size:16px;  }
 .menuMake i.mix { display:inline-block; width:100%; font-weight:normal; background:#ddd; color:#787878; }
+.menuMake i.bottle { background:#666; color:#fff; display:inline; padding:3px 10px; }
+.menuMake i.hot { background:#EF3A3A}
+.menuMake i.ice { background:#3a73ef}
 
-.menuMake i.notice:before, i.deco:before, i.mix:before, i.menuHr:before { display:none; }
+.menuMake i.notice:before, i.deco:before, i.mix:before, i.menuHr:before, i.bottle:before { display:none; }
 .menuHr { color:#aaa; border-style:dashed; display:block; margin:5px 0;  }
 
 @media screen and (max-width: 768px) {
-    .listInner { width:47%; }
     .menuName { font-size:16px; }
-    .menuMake i { font-size:13px; }
+    .menuMake i { font-size:14px; }
+    .menuMake i.notice { font-size:12px; }
 }
+
+/*탑버튼*/
+.topBtn { position:fixed; width:100%; max-width:768px; bottom:10px; z-index:999;  }
+.topBtn a { display:block; float:right; width:50px; height:50px; background:#FFD900; color:#111; border-radius:50%; }
+.topBtn a i { display:block; font-size:20px; line-height:50px; text-align:center; }
+.topBtn a p { display:none; }
 
 /*폰트*/
 @font-face {
