@@ -57,8 +57,10 @@ body { width:100%; background:#fff; font-family: 'NexonMaplestory', serif; }
 .menuMake i.notice { display:block; word-break: keep-all; color:#FF5151; margin-left:8px; font-size:16px;  }
 .menuMake i.mix { display:inline-block; width:100%; font-weight:normal; background:#ddd; color:#787878; }
 .menuMake i.bottle { background:#666; color:#fff; display:inline; padding:3px 10px; }
-.menuMake i.hot { background:#EF3A3A}
-.menuMake i.ice { background:#3a73ef}
+.menuMake i.hot { background:#EF3A3A; }
+.menuMake i.ice { background:#3a73ef; }
+.menuMake i.num { background:#FFD900; color:#353535; border-radius:50px; }
+.menuMake i.month { background:#15998e; border-radius:50px; }
 
 .menuMake i.notice:before, i.deco:before, i.mix:before, i.menuHr:before, i.bottle:before { display:none; }
 .menuHr { color:#aaa; border-style:dashed; display:block; margin:5px 0;  }
