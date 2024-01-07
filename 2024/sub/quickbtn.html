@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        #top_btn { background:#ccc; position:fixed;  width:60px; height:60px; line-height:60px; border-radius:50px; border:1px solid #ccc; color:#fff; }
+        #top_btn:hover { cursor: pointer; background:#FFC200; color:#111; border:none; }
+        #top_btn i { font-size:20px; }
+
+        #icon_btn { position:fixed;  width:60px; height:60px; line-height:60px; border-radius:50px; color:#fff; text-align:center; }
+        #icon_btn i { line-height:60px; font-size:20px; }
+        .icon_btn01 { right:20px; bottom:180px; border:1px solid #ccc;  background:#ccc;  }
+        .icon_btn01:hover { background:#E3114E; border:1px solid #E3114E; }
+        .icon_btn02 { right:20px; bottom:100px; border:1px solid #ccc;  background:#ccc;  }
+        .icon_btn02:hover { background:#115ae3;border:1px solid #115ae3; }
+        .icon_btn03 { right:20px; bottom:20px; }
+    </style>
+    
+</head>
+<body>
+    <!--퀵버튼-->
+    <div id="icon_button">
+        <a onclick="history.back()" href="./../portfolio.html" target="_blank" id="icon_btn" class="icon_btn01"><i class="fa-solid fa-house"></i></a>
+        <a href="http://xn--w39a72hw8ap0t7rc03fa93g.kr/" target="_blank" id="icon_btn" class="icon_btn02"><i class="fa-solid fa-earth-asia"></i></a>
+    </div>
+    <button type="button" id="top_btn" class="icon_btn03">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    <script>
+        $(function() {
+            $("#top_btn").on("click", function() {
+                $document.createElement("html, body").animate({scrollTop:0}, '500');
+                return false;
+            });
+        });
+    </script>
+</div>
+</body>
+</html>

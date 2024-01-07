@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDEO EDITING | 영상편집</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/portfolio.css" type="text/css">
+    <link rel="stylesheet" href="css/video.css" type="text/css">
+    <link rel="stylesheet" href="../css/fonts.css" type="text/css">
+
+    <!--폰트어썸-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+    <!--구글폰트-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!--script CDM연결방식-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <section id="video">
+        <div class="subinner">
+            <h2>Video Editing</h2>
+            <!--PC버전-->
+            <div id="video_pc" class="video">
+                    <div class="video_1">
+                        <div class="modal_btn">
+                            <div class="video_img">
+                                <div class="video_hover">
+                                    <div class="video_line">
+                                        <span>
+                                            <p>PLAY</p>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video_txt">
+                                <b><i class="fa-solid fa-clapperboard"></i> 영상 편집자 지원 1차 영상</b>
+                                <span>유튜버 : 우주하마</span>
+                                <span>PLAYGAME : 배틀그라운드</span>
+                            </div>
+                        </div>
+                        <div class="modal">
+                            <div class="modal_content">
+                                <iframe width="900" height="500" src="https://www.youtube.com/embed/tO7bbDZonC4?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video_2">
+                        <div class="modal_btn">
+                            <div class="video_img">
+                                <div class="video_hover">
+                                    <div class="video_line">
+                                        <span>
+                                            <p>PLAY</p>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="video_txt">
+                                <b><i class="fa-solid fa-clapperboard"></i> 영상 편집자 지원 2차 영상</b>
+                                <span>유튜버 : 우주하마</span>
+                                <span>PLAYGAME : 리그오브레전드(LOL)</span>
+                            </div>
+                        </div>
+                        <div class="modal">
+                            <div class="modal_content">
+                                <iframe width="900" height="500" src="https://www.youtube.com/embed/kwI-zQmhG4E?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        $(function(){ 
+
+                            $(".video_1 .modal_btn").click(function(){
+                                $(".video_1 .modal").fadeIn();
+                            });
+
+                            $(".video_1 .modal").click(function(){
+                                $(".video_1 .modal .modal_content iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                                $(".video_1 .modal").fadeOut();
+                            });
+                            
+
+                        });
+
+                        $(function(){ 
+
+                            $(".video_2 .modal_btn").click(function(){
+                                $(".video_2 .modal").fadeIn();
+                            });
+
+                            $(".video_2 .modal").click(function(){
+                                $(".video_2 .modal .modal_content iframe")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+                                $(".video_2 .modal").fadeOut();
+                            });
+
+
+                        });
+                    </script>
+            </div>
+        </div>
+        <!--배경화면-->
+        <div class="video_bg00"></div>
+        <div id="video_bg_icon" class="video_bg03"></div>
+        <div id="video_bg_icon" class="video_bg01"></div>
+        <div id="video_bg_icon" class="video_bg02"></div>
+        <div id="video_bg_icon" class="video_bg04"></div>
+        <div id="video_bg_icon" class="video_bg05"></div>
+
+        <!--퀵버튼 시작-->
+        <div id="icon_button">
+            <a onclick="history.back()" href="./../portfolio.html" target="_self" id="icon_btn" class="icon_btn01"><i class="fa-solid fa-house"></i></a>
+            <!-- <a href="#none" target="_blank" id="icon_btn" class="icon_btn02"><i class="fa-solid fa-earth-asia"></i></a> -->
+        </div>
+        <button type="button" id="top_btn" class="icon_btn03">
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </button>
+        <script>
+            $(function() {
+                $("#top_btn").on("click", function() {
+                    $("html, body").animate({scrollTop:0}, '500');
+                    return false;
+                });
+            });
+        </script>
+        <!--퀵버튼 끝-->
+    </section>
+</body>
+</html>
