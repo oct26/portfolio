@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUNHEE | PORTFOLIO</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/fonts.css" type="text/css">
+
+    <!--폰트어썸-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+    <!-- AOS 라이브러리 불러오기-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+
+    <!--구글폰트-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+	<!--script CDM연결방식-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <section id="about">
+        <div class="inner">
+            <div class="about-con">
+
+                <div class="about-top">
+                    <div class="about-txt">
+                        <div class="hero">
+                            <h2>PORTFOLIO.</h2>
+                            <p id="dynamic"></p><!--타이핑문구-->
+                        </div>
+                        <script>//타이핑스크립트
+                            const target = document.querySelector("#dynamic"); //html에서 dynamic 선택
+            
+                            //함수 만들기
+                            function blink(){
+                                target.classList.toggle("active"); // dynamic에 active 클래스 추가<->삭제 반복
+                            }
+                            setInterval(blink, 500) // blink 함수를 0.5초마다 실행
+            
+                            const string = "다양한 업무 능력을 갖춘 인재 신선희 입니다.";//원하는 텍스트를 string변수 선언
+                            const split = string.split(""); //string의 텍스트를 여러개의 문자열로 나눠줌
+            
+                            //텍스트내용을 지우는 함수 만들기
+                            function reset(){ 
+                                target.textContent = ""; //textContent의 내용 없애주기
+                                const resplit = string.split(""); 
+                            // string의 텍트스를 여러개의 문자열로 나눠주고 resplit 변수에 할당
+                                dynamic(resplit); // dynamic함수에 resplit인자를 넣어서 실행
+                            }
+            
+                            function dynamic(arr){
+                                if(arr.length > 0){
+                                    target.textContent += arr.shift();
+                                    setTimeout(function(){
+                                        dynamic(arr)}, 80)
+                                } else { //배열의 길이가 0이하이면(배열에 요소가 없으면)
+                                    setTimeout(reset, 3000); //3초후에 reset함수 실행
+                                }
+                            }
+                            dynamic(split);
+                        </script>
+                    </div>
+                </div>
+                
+                <div class="about-bottom">
+                    <div class="about-left">
+                        <div class="about-info">
+                            <strong>SHIN SUN HEE</strong>
+                            <span><i class="fa-solid fa-crown"></i> 신선희</span>
+                            <span><i class="fa-solid fa-cake-candles"></i> 1994.10.26</span>
+                            <span><i class="fa-solid fa-mobile"></i> 010 5031 1036</span>
+                            <span><i class="fa-solid fa-envelope"></i> sunhee0o@naver.com</span>
+                        </div>
+                    </div>
+                    <div class="about-right">
+                        <ul>
+                            <li>
+                                <b>&#8226; HISTORY</b>
+                                <span>
+                                    <em>라라브레드<i>2023.09 ~ 2023.11</i></em>
+                                    <em>모두(MODOO) 웹에이전시<i>2020.03 ~ 2022.09</i></em>
+                                </span>
+                            </li>
+                            <li>
+                                <b>&#8226; LICENSE</b>
+                                <span>
+                                    <em>2018&nbsp;&nbsp;웹 디자인 기능사<i></i></em>
+                                    <em>2018&nbsp;&nbsp;컴퓨터 그래픽스 운용 기능사<i></i></em>
+                                    <em>2018&nbsp;&nbsp;GTQ 1급<i></i></em>
+                                    <em>2017&nbsp;&nbsp;컴퓨터 활용 2급<i></i></em>
+                                    <em>2013&nbsp;&nbsp;자동차 운전 면허증 1종<i></i></em>
+                                </span>
+                            </li>
+                            <li>
+                                <b>&#8226; EDUCATION & ACTIVITY</b>
+                                <span>
+                                    <em>클로즈랭스 서포터즈 1기<i>수원/안산/용인에서 뭐하지? SNS플랫폼</i><i>2022.11~2023.02</i></em>
+                                    <em>SBS아카데미 영상편집반<i>2019.02~2019.04</i></em>
+                                    <em>스마트 웹&앱 컨텐츠 디자인<i>2017.12~2018.10</i></em>
+                                </span>
+                            </li>
+                            <li>
+                                <b>&#8226; SKILL & TOOL</b>
+                                <table>
+                                    <tr>
+                                        <td><img src="images/skill01.png" alt=""><i>HTML</i></td>
+                                        <td><img src="images/skill02.png" alt=""><i>CSS</i></td>
+                                        <td><img src="images/skill03.png" alt=""><i>JS</i></td>
+                                        <td><img src="images/skill04.png" alt=""><i>Query</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/skill05.png" alt=""><i>Photoshop</i></td>
+                                        <td><img src="images/skill06.png" alt=""><i>illustration</i></td>
+                                        <td><img src="images/skill07.png" alt=""><i>Premiere pro</i></td>
+                                        <td><img src="images/skill08.png" alt=""><i>After effect</i></td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="inner">
+            <div id="title"><h2>Work Project</h2></div>
+            <div id="container">
+
+                <div class="flex-box">
+                    <div class="portfolio-box">
+                        <a href="sub/design-banner.html" target="_self">
+                            <div class="thum">
+                                <img src="images/banner.jpg" alt="샘플이미지">
+                                <div class="viewmore"><b>View More +</b></div>
+                            </div>
+                            <div class="info">
+                                <h5>배너 디자인</h5>
+                                <p>X배너, 현수막, 홈페이지 롤링배너, 키오스크 롤링배너 등 다양한 배너디자인 작업 진행</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-box">
+                        <a href="sub/design-poster.html" target="_self">
+                            <div class="thum">
+                                <img src="images/poster.jpg" alt="샘플이미지">
+                                <div class="viewmore"><b>View More +</b></div>
+                            </div>
+                            <div class="info">
+                                <h5>포스터 디자인</h5>
+                                <p>이벤트포스터, 이벤트쿠폰, 안내문 디자인 등 행사기획에 맞춰 포스터 디자인 작업 진행</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-box">
+                        <a href="sub/design-did.html" target="_self">
+                            <div class="thum">
+                                <img src="images/did.jpg" alt="샘플이미지">
+                                <div class="viewmore"><b>View More +</b></div>
+                            </div>
+                            <div class="info">
+                                <h5>DID영상 제작</h5>
+                                <p>신메뉴 홍보용 영상 제작, 이벤트 영상 제작, 영상 기획안 작성 및 제작 진행</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-box">
+                        <a href="sub/design-card.html" target="_self">
+                            <div class="thum">
+                                <img src="images/cardnews.jpg" alt="샘플이미지">
+                                <div class="viewmore"><b>View More +</b></div>
+                            </div>
+                            <div class="info">
+                                <h5>카드뉴스 디자인</h5>
+                                <p>온라인 홍보용 컨텐츠 썸네일 제작 및 인스타그램 업로드용 카드뉴스 제작 진행</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-box">
+                        <a href="sub/design-photograph.html" target="_self">
+                            <div class="thum">
+                                <img src="images/photograph.jpg" alt="샘플이미지">
+                                <div class="viewmore"><b>View More +</b></div>
+                            </div>
+                            <div class="info">
+                                <h5>촬영 디렉팅</h5>
+                                <p>촬영 기획안 부터 디렉팅, 서포트까지! 포스터용 사진촬영 및 마케팅용 온라인 사진촬영 진행</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-box">
+                        <a href="sub/publishing.html" target="_self">
+                            <div class="thum">
+                                <img src="images/publishing.jpg" alt="샘플이미지">
+                                <div class="viewmore"><b>View More +</b></div>
+                            </div>
+                            <div class="info">
+                                <h5>홈페이지 제작</h5>
+                                <p>프랜차이즈, 기업 홈페이지, 쇼핑몰 등 고객의 니즈에 따라 디자인부터 코딩까지 맞춤 홈페이지 제작 (+웹에이전시 경력)</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-box">
+                        <a href="sub/video.html" target="_self">
+                            <div class="thum">
+                                <img src="images/video.jpg" alt="샘플이미지">
+                                <div class="viewmore"><b>View More +</b></div>
+                            </div>
+                            <div class="info">
+                                <h5>유튜브 영상편집</h5>
+                                <p>편집 기획 진행, 영상편집, 게임유튜버 영상편집자 지원 영상</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-box">
+                        <a href="https://blog.naver.com/7h25m" target="_blank">
+                            <div class="thum">
+                                <img src="images/blog.jpg" alt="샘플이미지">
+                                <div class="viewmore"><b>View More +</b></div>
+                            </div>
+                            <div class="info">
+                                <h5>네이버블로그 마케팅</h5>
+                                <p>직접 운영하고 있는 맛집과 일상을 담은 블로그 '또또'</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="portfolio-box">
+                        <a href="https://www.instagram.com/ddoddo_818/" target="_blank">
+                            <div class="thum">
+                                <img src="images/insta.jpg" alt="샘플이미지">
+                                <div class="viewmore"><b>View More +</b></div>
+                            </div>
+                            <div class="info">
+                                <h5>인스타그램 마케팅</h5>
+                                <p>직접 운영하고 있는 맛집 인스타그램 '또또'</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                </div>
+                <!-- <div class="more_btn"><span>Load More (6 / 10)</span></div>
+                <script>
+                    $(function(){
+                        /*more btn*/
+                        $('.flex-box > div').hide();
+                        $(".flex-box > div").slice(0, 6).css("display", "block"); 
+                        $(".more_btn").click(function(e){
+                            e.preventDefault();
+                            $(".flex-box > div:hidden").slice(0, 6).fadeIn(300).css('display', 'block'); 
+                            if($(".flex-box > div:hidden").length == 0){
+                                $('.more_btn').fadeOut(300); 
+                            }
+                        });
+                    });
+                </script> -->
+            </div>
+        </div>
+    </section>
+
+    <div class="scroll-down">
+        <div class="slide_mous ">
+            <p class="down"><img class="mouse" src="images/mouse.png" />&nbsp;&nbsp;Scroll Down >></p>
+            
+        </div>
+    </div>
+
+
+    <script> 
+        AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+    </script>
+</body>
+</html>
