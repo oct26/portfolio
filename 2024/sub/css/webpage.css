@@ -1,0 +1,47 @@
+*{margin:0; padding:0;}
+li { list-style:none; }
+address,em,i { font-style:normal; }
+a { text-decoration: none; color:#333; }
+html { overflow-x: hidden;}
+body { position:relative; width:100%; font-family: 'Pretendard', 'GmarketSans', serif; }
+
+/*공통*/
+.fixed { position:fixed; }
+#webpage h2 { text-align:center; color:#000; font-size:80px; padding:50px 0; font-family: 'Brygada 1918', serif; font-style:italic; }
+
+/*스크립트 필요 css*/
+.right { overflow-y: auto; }
+.work { display: none; }
+.work.active { display: block; }
+
+/* 클릭된 thum에 적용될 스타일 */
+#webpage .thum.active span { font-weight: bold; color:#333; }
+#webpage .thum.active img { filter: grayscale(0%); }
+
+
+#flexBox { display:flex; width:100vw; height:100%; }
+#flexBox .left { position:relative; width:35%; background:#fff; }
+#flexBox .right { width:65%; background:#fff; text-align:center; }
+
+/*왼쪽+썸네일 공간*/
+#webpage .left>div { margin-left:50px; }
+#webpage .left ul { display:flex; flex-direction:column; align-items:center;}
+#webpage .left ul li { display:flex; align-items: center; background:#f1f1f1; border-radius: 100px; margin-bottom:20px; padding:10px; width:60%; cursor:pointer; }
+#webpage .left ul li:hover img { filter: grayscale(0%); }
+#webpage .left ul li img { width:80px; border-radius: 50%; border:0; filter: grayscale(100%); transition:all .3s; }
+#webpage .left ul li span { display:block; margin-left:10px; font-size:1.2em; color:#888; transition:all .3s; }
+#webpage .left ul li:hover span { color:#000; }
+
+/*오른쪽+상세페이지 공간*/
+#webpage .right ul {}
+#webpage .right ul li {}
+#webpage .right ul li p { line-height: 0;}
+
+
+
+/*---반응형---*/
+@media only screen and (max-width:1024px) {
+}
+
+@media only screen and (max-width:768px) {
+}
