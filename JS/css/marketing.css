@@ -1,0 +1,41 @@
+/*====MARKETING====*/
+.MARKETING .flex { justify-content: space-between;}
+
+/*스크립트 css*/
+ .image-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      /* width: 480px; */
+      width:800px;
+      /* margin: 20px auto; */
+    }
+    .image-container a {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      text-decoration: none;
+    }
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 6px;
+    }
+    .reload-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all .3s;
+    }
+

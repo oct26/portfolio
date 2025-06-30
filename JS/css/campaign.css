@@ -1,0 +1,60 @@
+/*====Campaign====*/
+.CAMPAIGN {}
+.CAMPAIGN>div{ max-width:100%; }
+
+ .slider {
+      position: relative;
+      width: 1600px;
+      max-width: 100%;
+      margin: 40px auto;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides .cam_box {
+      opacity: 0.4;
+      transition: opacity 0.3s;
+    }
+
+    .slides img {
+      width: 400px;
+      user-select: none;
+    }
+
+    .slides .cam_box.active2 {
+      opacity: 1;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 10px 20px;
+      transform: translateY(-50%);
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+
+/* 데스크탑 스타일 (13인치 포함) */
+@media (min-width: 1024px) {
+  /* 데스크탑 전용 레이아웃 */
+  .inner { width:1200px; }
+}
+/* 대형 데스크탑 (고해상도 모니터용) */
+@media (min-width: 1440px) {
+  /* 더 넓은 레이아웃이나 추가 스타일 */
+  .inner { width:1500px; }
+}
